@@ -1,4 +1,9 @@
 -- MONITOR CONFIG
+-- Auto-detects all monitors; workspaces assigned left-to-right (monitor at smallest X gets WS 1).
+-- To reverse workspace order (e.g. if your physical monitors go 3←2←1):
+--   Copy this block into ~/.config/hypr/custom/general.lua, replace names/resolutions/positions,
+--   and list monitors in REVERSE physical order (rightmost monitor first = position "0x0").
+--   The first hl.monitor() call in custom/general.lua will take precedence over the one below.
 hl.monitor({
     output = "",
     mode = "preferred",
